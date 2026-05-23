@@ -42,6 +42,7 @@ pip install torch torchvision opencv-python pillow matplotlib scikit-learn numpy
 从Kaggle下载 Garbage Classification Dataset
 
 数据集目录结构：
+
     data/
     ├── cardboard/    # 纸板
     ├── glass/        # 玻璃
@@ -52,6 +53,7 @@ pip install torch torchvision opencv-python pillow matplotlib scikit-learn numpy
 
 
  ### 📁 文件说明
+ 
     | 文件 | 用途 |
     |------|------|
     | config.py | 配置文件（路径、超参数、实验设置） |
@@ -73,6 +75,7 @@ python train.py
     | cm_*.png	| 混淆矩阵 |
     | comparison_results.png	| 对比实验图 |
     | report_*.txt	| 分类报告 |
+    
 🔍 推理测试
 bash
 python predict.py
