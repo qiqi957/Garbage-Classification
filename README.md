@@ -35,6 +35,7 @@
 ```bash
 pip install torch torchvision opencv-python pillow matplotlib scikit-learn numpy
 
+
 数据集准备
 从Kaggle下载 Garbage Classification Dataset
 
