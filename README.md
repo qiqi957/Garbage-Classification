@@ -34,9 +34,11 @@
 
 ```bash
 pip install torch torchvision opencv-python pillow matplotlib scikit-learn numpy
+```
 
 
-数据集准备
+### 数据集准备
+
 从Kaggle下载 Garbage Classification Dataset
 
 数据集目录结构：
@@ -48,26 +50,29 @@ pip install torch torchvision opencv-python pillow matplotlib scikit-learn numpy
     ├── plastic/      # 塑料
     └── trash/        # 其他垃圾
 
-📁 文件说明
-    文件	用途
-    config.py	配置文件（路径、超参数、实验设置）
-    sign_classifier.py	模型定义（MobileNetV2）
-    train.py	训练脚本（自动运行3组对比实验）
-    predict.py	推理脚本（单图/批量/摄像头）
-    utils.py	工具函数（增强、指标、绘图）
 
-🏃 训练模型
+ ### 📁 文件说明
+    | 文件 | 用途 |
+    |------|------|
+    | config.py | 配置文件（路径、超参数、实验设置） |
+    | sign_classifier.py | 模型定义（MobileNetV2） |
+    | train.py | 训练脚本（自动运行3组对比实验） |
+    | predict.py | 推理脚本（单图/批量/摄像头） |
+    | utils.py | 工具函数（增强、指标、绘图） |
+
+### 🏃 训练模型
 bash
 python train.py
 训练完成后在 output/ 目录生成：
 
-    文件	说明
-    best_model.pth	最佳模型权重（准确率94.27%）
-    class_distribution.png	类别分布图
-    curve_*.png	学习曲线
-    cm_*.png	混淆矩阵
-    comparison_results.png	对比实验图
-    report_*.txt	分类报告
+    | 文件	| 说明 |
+    |------|------|
+    | best_model.pth | 最佳模型权重（准确率94.27%） |
+    | class_distribution.png	| 类别分布图 |
+    | curve_*.png	| 学习曲线 |
+    | cm_*.png	| 混淆矩阵 |
+    | comparison_results.png	| 对比实验图 |
+    | report_*.txt	| 分类报告 |
 🔍 推理测试
 bash
 python predict.py
@@ -101,12 +106,3 @@ python predict.py
     颜色抖动（±20%）
 
     ImageNet标准化
-
-text
-
-主要修改：
-1. **精简结构** - 去掉冗余内容，保留核心信息
-2. **优化表格** - 更清晰的数据呈现
-3. **突出重点** - 94.27%准确率放在显眼位置
-4. **统一格式** - 文件说明、模式说明等用表格展示
-5. **保留关键** - 对照实验结果和技术方案核心信息
