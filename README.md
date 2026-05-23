@@ -93,14 +93,16 @@ python predict.py
     💡 小学习率（0.0001）+ 数据增强 = 最佳效果
 
 🛠️ 技术方案
-    组件	说明
-    骨干网络	MobileNetV2（ImageNet预训练）
-    输入尺寸	224×224×3
-    优化器	Adam
-    损失函数	CrossEntropyLoss
-    学习率调度	ReduceLROnPlateau
-    Batch Size	16
-    Epochs	25
+
+    | 组件	| 说明 |
+    | 骨干网络	| MobileNetV2（ImageNet预训练）|
+    | 输入尺寸	| 224×224×3|
+    | 优化器	| Adam|
+    | 损失函数	| CrossEntropyLoss|
+    | 学习率调度	| ReduceLROnPlateau|
+    | Batch Size	| 16|
+    | Epochs | 25|
+    
 数据增强策略
     随机水平翻转（p=0.5）
 
